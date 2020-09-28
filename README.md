@@ -6,4 +6,4 @@ Bot de Telegram que almacena tu rutina de ejercicios del gimnasio y te recuerda 
 Lenguaje: Typescript
 
 ## Documentación adicional
-* [Configuración de git](/docs/git-config.md)
+* [Configuración de git](docs/git-config.md)
