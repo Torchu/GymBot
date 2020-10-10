@@ -1,3 +1,4 @@
+//Clase sin métodos que define el objeto ejercicio
 class Exercise { 
     constructor(
         public name: string,

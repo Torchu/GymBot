@@ -1,6 +1,8 @@
 # GymBot
 ## Descripción
-Bot de Telegram que almacena tu rutina de ejercicios del gimnasio y te recuerda cada día qué ejercicios tienes que hacer.
+Como cliente de gimnasios a lo largo de mi vida, he visto como la gente lleva apuntados en las notas del móvil, en un papel o incluso memorizados los ejercicios que debe realizar cada día. Esto es incómodo y si eres de los que memorizan, se te pueden incluso olvidar, perdiendo eficacia en tu sesión de gimnasio.
+
+GymBot es una aplicación pensada para que te notifique en tu teléfono los ejercicios que debes realizar junto con su peso correspondiente.
 
 ## Herramientas
 * Language: [Typescript](https://www.typescriptlang.org)
@@ -10,6 +12,8 @@ Bot de Telegram que almacena tu rutina de ejercicios del gimnasio y te recuerda 
 * Logging: [Winston](https://www.npmjs.com/package/winston)
 * Database: [MongoDB](https://www.mongodb.com)
 
-
 ## Documentación adicional
 * [Configuración de git](docs/git-config.md)
+* [Pasos a realizar](docs/pasos.md)
+* [Historias de usuario](docs/hu.md)
+* [Primera clase](src/models/Exercise.ts)
