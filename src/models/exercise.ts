@@ -17,6 +17,7 @@ class Exercise {
         if(newWeight < 0){
             throw new Error("Invalid weight: Weights can't be negative numbers")
         }
+        this._weight=newWeight;
     }
 
     increaseWeight(increase: number){
@@ -26,3 +27,5 @@ class Exercise {
         this._weight += increase;
     }
 }
+
+export default Exercise
