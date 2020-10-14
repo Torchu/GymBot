@@ -1,1 +1,4 @@
 entidad: src/models/Exercise.ts
+lenguaje: typescript
+test: 
+taskfile: 
