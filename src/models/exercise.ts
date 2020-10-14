@@ -3,11 +3,7 @@ class Exercise {
     constructor(
         readonly name: string,
         private _weight: number
-    ) {
-        if(_weight < 0){
-            throw new Error("Invalid weight: Weights can't be negative numbers")
-        }
-    }
+    ) {}
 
     get weight(): number{
         return this._weight;
