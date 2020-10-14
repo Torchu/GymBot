@@ -2,8 +2,6 @@
 class Exercise { 
     constructor(
         readonly name: string,
-        readonly muscles: string[], 
-        readonly description: string,
         private _weight: number
     ) {
         if(_weight < 0){
