@@ -3,6 +3,9 @@ import Exercise from '../models/exercise';
 const exercise = new Exercise("Press banca", 40);
 
 describe('exercise model test', () => {
+    it('should throw an error while creating a instance', () => {
+        expect(() => {const failExercise = new Exercise("Press militar", -30)}).toThrowError("negative");
+    });
     it('should give me the weight of the exercise', () => {
         expect(exercise.weight).toBe(40);
     });

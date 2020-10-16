@@ -4,6 +4,10 @@ Como cliente de gimnasios a lo largo de mi vida, he visto como la gente lleva ap
 
 GymBot es una aplicación pensada para que te notifique en tu dispositivo móvil los ejercicios que debes realizar junto con su peso correspondiente.
 
+## Comandos
+* Compilar el proyecto -> npm run build
+* Testear el código -> npm run test
+
 ## Herramientas
 
 * Language: [Typescript](https://www.typescriptlang.org)
