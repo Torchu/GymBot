@@ -6,11 +6,11 @@ Para resolver esto, simplemente modifiqué el mensaje del commit. Si solo fuese 
 - Primero vamos a localizar cual es el commit más antiguo que queremos modificar con git log.
 - Si el commit más antiguo fue hace 3 commits, haremos *git rebase -i HEAD~3*. -i es para que abra el modo interactivo. Nos quedará una cosa así:
 
-*pick 7a62538 Added b.py*
+> *pick 7a62538 Added b.py*
 
-*pick ce9e582 b.py Modification 1*
+> *pick ce9e582 b.py Modification 1*
 
-*pick dfc0295 b.py Modification 2*
+> *pick dfc0295 b.py Modification 2*
 
 - Ahora cambiamos la palabra *pick* de los commits que queramos modificar por la palabra *reword*, guardamos y salimos.
 - Nos abrirá un editor de texto con el que cambiar el mensaje de todos los commits que hayamos marcado como reword, así que simplemente nos queda ir modificándolos.
