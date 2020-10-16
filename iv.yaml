@@ -1,4 +1,4 @@
-entidad: src/models/Exercise.ts
+entidad: src/models/exercise.ts
 lenguaje: typescript
 test: jest.config.js
 taskfile: package.json
