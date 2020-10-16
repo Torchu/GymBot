@@ -7,13 +7,14 @@ GymBot es una aplicación pensada para que te notifique en tu dispositivo móvil
 ## Comandos
 * Compilar el proyecto -> npm run build
 * Testear el código -> npm run test
+* Ver la cobertura de los test -> abrir  [index.html](docs/coverage/lcov-report/index.html)
 
 ## Herramientas
 
 * Language: [Typescript](https://www.typescriptlang.org)
 * Enviroment: [Node](https://nodejs.org)
 * Web Framework: [Express](https://expressjs.com)
-* Test Framework: [Jest](https://jestjs.io)
+* Test Framework: [Jest](docs/tools/jest.md)
 * Logging: [Winston](https://www.npmjs.com/package/winston)
 * Database: [MongoDB](https://www.mongodb.com)
 
