@@ -15,3 +15,8 @@ En este documento se irán describiendo los distintos pasos en la realización d
 * Creación de, al menos, una historia de usuario, dentro de los issues, para trabajar con ella y asignársela al primer milestone.
 * Creación de una primera clase, relativa a la historia de usuario.
 * Creación del archivo iv.yaml en el que se añadirá la nueva clase como entidad.
+
+## [Test Unitarios]
+* Elección de un framework para testeo y justificación del mismo.
+* Avanzar con el código del proyecto.
+* Creación de test para todo el código creado (no test, no code).
