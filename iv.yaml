@@ -1,4 +1,4 @@
 entidad: src/models/Exercise.ts
 lenguaje: typescript
-test: 
-taskfile: 
+test: jest.config.js
+taskfile: package.json
