@@ -5,8 +5,9 @@ Los principales motivos de usar Jest frente a otros frameworks como Mocha son:
 - el hecho de que busque todos los test automáticamente mientras estén en el directorio correcto.
 - por defecto testea (*mocks*) todas las dependencias.
 
-Además, permite hacer un análisis de la cobertura de tus test y te lo muestra en formato [HTML](docs/coverage/lcov-report/index.html). Así siempre sabrás si estás dejando alguna función sin testear en tu código.
+Además, permite hacer un análisis de la cobertura de tus test y te lo muestra en formato [HTML](../coverage/lcov-report/index.html). Así siempre sabrás si estás dejando alguna función sin testear en tu código.
 
 ## Links
 [Web oficial](https://jestjs.io)
+
 [Jest vs Mocha](https://andrew.codes/jest-vs-mocha-why-jest-wins/)
