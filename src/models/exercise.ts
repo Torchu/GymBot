@@ -1,9 +1,13 @@
 //Clase sin métodos que define el objeto ejercicio
 class Exercise { 
-    constructor(
-        readonly name: string,
-        private _weight: number
-    ) {}
+    private _weight: number;
+    
+    constructor(readonly name: string, _weight: number) {
+        if(_weight < 0){
+            throw new Error("Invalid weight: Weights can't be negative numbers");
+        }
+        this._weight = _weight;
+    }
 
     get weight(): number{
         return this._weight;
@@ -11,7 +15,7 @@ class Exercise {
 
     set weight(newWeight: number){
         if(newWeight < 0){
-            throw new Error("Invalid weight: Weights can't be negative numbers")
+            throw new Error("Invalid weight: Weights can't be negative numbers");
         }
         this._weight=newWeight;
     }
