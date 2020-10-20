@@ -23,6 +23,6 @@ GymBot es una aplicación pensada para que te notifique en tu dispositivo móvil
 * [Configuración de git](docs/git-config.md)
 * [Pasos a realizar](docs/pasos.md)
 * [Historias de usuario](docs/hu.md)
-* [Carpeta de test](src/__test__)
-* [Primera clase](src/models/Exercise.ts)
+* [Tests](docs/tests.md)
+* [Primera clase](src/models/exercise.ts)
 * [Problemas encontrados durante el desarrollo del proyecto y sus soluciones](docs/errors.md)

@@ -1,0 +1,1 @@
+# Fichero en el que se enlazarán todos los test de la [carpeta de tests](../src/__tests__)
