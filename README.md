@@ -13,6 +13,7 @@ GymBot es una aplicación pensada para que te notifique en tu dispositivo móvil
 
 * Language: [Typescript](https://www.typescriptlang.org)
 * Enviroment: [Node](https://nodejs.org)
+* Build: [npm](docs/tools/npm.md)
 * Web Framework: [Express](https://expressjs.com)
 * Test Framework: [Jest](docs/tools/jest.md)
 * Logging: [Winston](https://www.npmjs.com/package/winston)
@@ -22,5 +23,6 @@ GymBot es una aplicación pensada para que te notifique en tu dispositivo móvil
 * [Configuración de git](docs/git-config.md)
 * [Pasos a realizar](docs/pasos.md)
 * [Historias de usuario](docs/hu.md)
+* [Carpeta de test](src/__test__)
 * [Primera clase](src/models/Exercise.ts)
 * [Problemas encontrados durante el desarrollo del proyecto y sus soluciones](docs/errors.md)
