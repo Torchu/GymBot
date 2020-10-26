@@ -20,3 +20,10 @@ En este documento se irán describiendo los distintos pasos en la realización d
 * Elección de un framework para testeo y justificación del mismo.
 * Avanzar con el código del proyecto.
 * Creación de test para todo el código creado (no test, no code).
+
+## [Docker](https://github.com/Torchu/GymBot/milestone/3)
+* Elegir el contenedor base.
+* Crear el Dockerfile.
+* Subir el contenedor a DockerHub y documentar la actualización automática.
+* Usar registros alternativos y públicos (GitHub Container Registry).
+* Comparar distintas imágenes para dar con la óptima para nuestro contenedor y documentarlo.
