@@ -3,7 +3,7 @@ LABEL version "1.0" mantainer="Torchu"
 
 WORKDIR /modules
 
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install
 
