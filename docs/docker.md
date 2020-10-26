@@ -18,19 +18,26 @@ Como para nuestro proyecto usaremos Node.js, usaremos las [imágenes oficiales](
 Lo primero es crearlas con nuestro Dockerfile:
 ![](img/docker-images.png)
 
-Como podemos observar, *stretch15* y *buster15* son considerablemente más pesadas que las otras, por lo que, a priori, no nos interesarían.  Para estar seguros y seguir con la búsqueda de la mejor imagen, ejecutaremos los test en todas y mediremos el tiempo que tarda cada una. Para ello utilizamos el comando *time docker run -t -v `pwd`:/test <nombre_de_la_imagen>* con todas las imágenes que hemos creado:
+Como podemos observar, *stretch15* y *buster15* son considerablemente más pesadas que las otras, por lo que, a priori, no nos interesarían.  Para estar seguros y seguir con la búsqueda de la mejor imagen, ejecutaremos los test en todas y mediremos el tiempo que tarda cada una. Para ello utilizamos el comando ``time docker run -t -v \`pwd\`:/test <nombre_de_la_imagen>`` con todas las imágenes que hemos creado:
 
 **15.0.1-alpine3.11**
+
 ![](img/times-alpine15.png)
 
 **15.0.1-buster**
+
 ![](img/times-buster15.png)
 
 **15.0.1-buster-slim**
+
 ![](img/times-buster-slim15.png)
 
 **15.0.1-stretch**
+
 ![](img/times-stretch15.png)
 
 **15.0.1-stretch-slim**
+
 ![](img/times-stretch-slim15.png)
+
+
