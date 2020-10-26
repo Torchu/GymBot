@@ -46,7 +46,7 @@ Lo único que queda es editar el Dockerfile para que corresponda la mejor imagen
 
 ## Dockerhub
 
-Lo primero es crearnos una [cuenta](https://hub.docker.com/u/torchu) en la plataforma. Después, conectaremos nuestra cuenta de Github a la cuenta de Dockerhub. Tras ello, crearemos un [repositorio](https://hub.docker.com/r/torchu/gymbot) en Dockerhub con el mismo nombre que nuestro repositorio de Github, de forma que se enlace con nuestro repositorio de Github, para que cada vez que actualicemos el proyecto, actualice el contenedor.
+Lo primero es crearnos una [cuenta](https://hub.docker.com/u/torchu) en la plataforma. Después, conectaremos nuestra cuenta de Github a la cuenta de Dockerhub. Tras ello, crearemos un [repositorio](https://hub.docker.com/r/torchu/gymbot) en Dockerhub con el mismo nombre que nuestro repositorio de Github y enlazarlo con nuestro repositorio de Github, para que cada vez que actualicemos el proyecto, actualice el contenedor.
 
 ## Github Container Registry
 
