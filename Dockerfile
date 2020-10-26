@@ -1,4 +1,4 @@
-FROM node:15.0.1-alpine3.10
+FROM node:15.0.1-stretch-slim
 LABEL version "1.0" mantainer="Torchu"
 
 WORKDIR /modules
