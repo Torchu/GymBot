@@ -43,5 +43,5 @@ Para esta asignatura se realizará la parte backend del proyecto, dejando abiert
 * [Pasos a realizar](docs/pasos.md)
 * [Historias de usuario](docs/hu.md)
 * [Primera clase](src/models/exercise.ts) y su [test](src/__tests__/exercise.test.ts)
-* [COnfiguración de docker](docs/docker.md)
+* [Configuración de docker](docs/docker.md)
 * [Problemas encontrados durante el desarrollo del proyecto y sus soluciones](docs/errors.md)

@@ -42,4 +42,14 @@ Como podemos observar, *stretch15* y *buster15* son considerablemente más pesad
 
 A la vista de los resultados está que **stretch-slim** es la mejor imagen para nuestro contenedor, ya que es la segunda más ligera y la segunda más rápida. Las imágenes **buster** y **stretch** quedan descartadas, ya que aunque aportan una buena velocidad, pesan el triple que el resto de imágenes. Otra buena opción podría ser usar **alpine**, ya que no se queda atrás en velocidad y es más ligera que **stretch-slim**, pero en este caso, he decidido utilizar la segunda.
 
+Lo único que queda es editar el Dockerfile para que corresponda la mejor imagen base.
 
+## Dockerhub
+
+Lo primero es crearnos una [cuenta](https://hub.docker.com/u/torchu) en la plataforma. Después, conectaremos nuestra cuenta de Github a la cuenta de Dockerhub. Tras ello, crearemos un [repositorio](https://hub.docker.com/r/torchu/gymbot) en Dockerhub con el mismo nombre que nuestro repositorio de Github, de forma que se enlace con nuestro repositorio de Github, para que cada vez que actualicemos el proyecto, actualice el contenedor.
+
+## Github Container Registry
+
+Para enlazar nuestro contenedor a Github Container Registry, generamos una token de acceso a nuestro github, desde las opciones de desarrollador. A esta le damos permiso para controlar los repositorios y para cargar y borrar paquetes. Después conectamos nuestro contenedor de docker y nuestro github a Github Container Registry con el comando  ``docker login ghrc.io -u <username> -p <token>``. Tras ello, generamos una imagen llamada ghrc.io/<username>/<repository_name>. Terminamos subiendo la imagen con el comando ``docker push <nombre_de_la_imagen>``.
+
+Como podemos ver [aquí](https://github.com/users/torchu/packages/container/package/gymbot) queda perfectamente subido.
