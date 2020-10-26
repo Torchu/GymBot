@@ -14,11 +14,11 @@ Para esta asignatura se realizará la parte backend del proyecto, dejando abiert
 ## Comandos
 
 * **Compilar el proyecto:**
-> npm run build
+> ``npm run build``
 * **Testear el código:**
-> npm run test
+> ``npm run test``
 * **Comprobar el nivel de cobertura de los test:**
-> npm run coverage
+> ``npm run coverage``
 
 ## Herramientas utilizadas
 

@@ -40,4 +40,6 @@ Como podemos observar, *stretch15* y *buster15* son considerablemente más pesad
 
 ![](img/times-stretch-slim15.png)
 
+A la vista de los resultados está que **stretch-slim** es la mejor imagen para nuestro contenedor, ya que es la segunda más ligera y la segunda más rápida. Las imágenes **buster** y **stretch** quedan descartadas, ya que aunque aportan una buena velocidad, pesan el triple que el resto de imágenes. Otra buena opción podría ser usar **alpine**, ya que no se queda atrás en velocidad y es más ligera que **stretch-slim**, pero en este caso, he decidido utilizar la segunda.
+
 
