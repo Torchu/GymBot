@@ -50,6 +50,6 @@ Lo primero es crearnos una [cuenta](https://hub.docker.com/u/torchu) en la plata
 
 ## Github Container Registry
 
-Para enlazar nuestro contenedor a Github Container Registry, generamos una token de acceso a nuestro github, desde las opciones de desarrollador. A esta le damos permiso para controlar los repositorios y para cargar y borrar paquetes. Después conectamos nuestro contenedor de docker y nuestro github a Github Container Registry con el comando  ``docker login ghrc.io -u <username> -p <token>``. Tras ello, generamos una imagen llamada ghrc.io/<username>/<repository_name>. Terminamos subiendo la imagen con el comando ``docker push <nombre_de_la_imagen>``.
+Para enlazar nuestro contenedor a Github Container Registry, generamos una token de acceso a nuestro github, desde las opciones de desarrollador. A esta le damos permiso para controlar los repositorios y para cargar y borrar paquetes. Después conectamos nuestro contenedor de docker y nuestro github a Github Container Registry con el comando  ``docker login ghrc.io -u <username> -p <token>``. Tras ello, generamos una imagen llamada ``ghrc.io/<username>/<repository_name>``. Terminamos subiendo la imagen con el comando ``docker push <nombre_de_la_imagen>``.
 
 Como podemos ver [aquí](https://github.com/users/torchu/packages/container/package/gymbot) queda perfectamente subido.
