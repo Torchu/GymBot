@@ -23,7 +23,8 @@
         "start": "node dist/app.js",
         "dev": "nodemon src/app.ts",
         "build": "tsc -p .",
-        "test": "jest --coverage --coverageDirectory='docs/coverage'"
+        "test": "jest",
+        "coverage": "jest --coverage --coverageDirectory='docs/coverage'"
     },
     "repository": {
         "type": "git",

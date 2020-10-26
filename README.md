@@ -17,6 +17,8 @@ Para esta asignatura se realizará la parte backend del proyecto, dejando abiert
 > npm run build
 * **Testear el código:**
 > npm run test
+* **Comprobar el nivel de cobertura de los test:**
+> npm run coverage
 
 ## Herramientas utilizadas
 
