@@ -1,13 +1,16 @@
 FROM node:15.0.1-stretch-slim
 LABEL version "1.0" mantainer="Torchu"
 
-WORKDIR /modules
+RUN npm i -g jest ts-jest ts-node typescript && mkdir /node_modules && chmod 755 /node_modules && chown node /node_modules
 
-COPY package*.json ./
+USER node
+COPY --chown=node package*.json ./
+RUN npm ci
 
-RUN npm install
+USER root
+RUN rm package*.json
+USER node
 
 WORKDIR /test
-VOLUME /test
 
-CMD cp -r /modules/node_modules/ /test && npm run test
+CMD [ "npm", "run", "test" ]
