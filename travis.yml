@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "15"
+  - "14"
+before_install:
+  - npm i -g npm@7.0.7
+  - npm i -g jest ts-jest
