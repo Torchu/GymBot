@@ -19,4 +19,4 @@ Para activar shippable en nuestro repositorio, desde nuestro dashboard, hacemos 
 
 ## Configurar Shippable en nuestro repositorio
 
-Para configurar shippable, necesitamos crear un fichero shippable.yml siguiendo las pautas de la [documentación oficial](http://docs.shippable.com/ci/yml-structure/).
+Shippable no requiere de configuración, a menos que quieras algun build específico. Dejando todo como está, será capaz de crear una imagen, instalar las dependencias y correr jest para comprobar que se cumplen los test. No realizará un test report, pero si no pasase algún test, el trabajo aparecerá como fallido.
