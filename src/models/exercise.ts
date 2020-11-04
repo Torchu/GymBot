@@ -3,9 +3,9 @@ class Exercise {
   private _weight: number;
 
   constructor(readonly name: string, _weight: number) {
-    /*if(_weight < 0){
-            throw new Error("Invalid weight: Weights can't be negative numbers");
-        }*/
+    if (_weight < 0) {
+      throw new Error("Invalid weight: Weights can't be negative numbers");
+    }
     this._weight = _weight;
   }
 
