@@ -1,7 +1,8 @@
-language: node_js
-node_js:
-  - "15"
-  - "14"
+language: minimal
+services:
+  - docker
 before_install:
-  - npm i -g npm@7.0.7
-  - npm i -g jest ts-jest
+  - docker pull torchu/gymbot
+
+script:
+  - docker run -t -v `pwd`:/test torchu/gymbot

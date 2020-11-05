@@ -21,9 +21,9 @@ Para ello, le damos al botón que dice "ACTIVATE ALL REPOSITORIES USING GITHUB A
 
 La configuración de travis se realiza mediante el fichero [.travis](../.travis.yml).
 
-Como estamos usando Node.js en nuestro proyecto, abrimos la [guía](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/) de Travis correspondiente. En nuestra configuración haremos que Travis pruebe con las dos últimas versiones de Node (14 y 15). También haremos que antes de que instale las dependencias instale la versión 7.0.7. de nuestro task manager (npm), ya que es la que estamos usando en el proyecto, y que instale jest y ts-jest, ya que son las dependencias utilizadas para testear el código.
+Para la configuración de Travis aprovecharemos la imagen [docker](https://hub.docker.com/repository/docker/torchu/gymbot) del hito anterior. Para ello, en nuestro fichero .travis seleccionamos como _language_ `minimal` ya que solo necesitamos que corra el contenedor. Añadimos también la opción _services_ en la que incluimos `docker`. En _before_install_ solo necesitamos que se descargue nuestra imagen desde [DockerHub](https://hub.docker.com/), por lo que incluimos la orden `docker pull torchu/gymbot`. Ahora solo nos queda indicar a Travis qué tiene que hacer para ejecutar nuestros test, por lo que en la opción _script_ añadimos la orden `` docker run -t -v `pwd`:/test torchu/gymbot ``.
 
-Ahora configuramos nuestro [fichero](../.travis.yml) siguiendo la documentación.
+Todo lo descrito en el párrafo anterior está explicado en más detalle en la [documentación oficial](https://docs.travis-ci.com/user/docker/).
 
 Como podemos observar, todo funciona a la perfección.
 
