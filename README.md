@@ -1,5 +1,7 @@
 # :muscle: GymBot :muscle:
 
+![](https://travis-ci.com/torchu/GymBot.svg?branch=master)
+
 ## Comandos
 
 - **Compilar el proyecto:**
@@ -8,6 +10,10 @@
   > `npm run test`
 - **Comprobar el nivel de cobertura de los test:**
   > `npm run coverage`
+
+## Integración continua
+
+Las herramientas de integración continua seleccionadas han sido [Travis](docs/travis.md) y [Shippable](docs/shippable.md). En los links están enlazados los ficheros que explican su configuración. A través del de Travis se puede acceder también a su fichero de configuración.
 
 ## Documentación adicional
 
