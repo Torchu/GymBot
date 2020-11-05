@@ -28,3 +28,7 @@ Todo lo descrito en el párrafo anterior está explicado en más detalle en la [
 Como podemos observar, todo funciona a la perfección.
 
 ![](img/travis-working.png)
+
+## ¿Por qué Travis?
+
+Se ha escogido Travis entre las distintas opciones porque es una herramienta sencilla de configurar, altamente extendida y con una gran integración con github. Además, permite utilizar imágenes de dockerhub sin mucha complicación.
