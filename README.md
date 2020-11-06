@@ -8,7 +8,7 @@
   > `npm run build`
 - **Testear el código:**
   > `npm run test`
-- **Comprobar el nivel de cobertura de los test:**
+- **Comprobar el nivel de cobertura de los test: (Actualmente no funciona)**
   > `npm run coverage`
 
 ## Integración continua
