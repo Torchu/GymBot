@@ -1,4 +1,3 @@
-//Clase sin métodos que define el objeto ejercicio
 class Exercise {
   private _weight: number;
 
