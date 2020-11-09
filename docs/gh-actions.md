@@ -1,6 +1,6 @@
 # GitHub Actions
 
-## COnfiguración
+## Configuración
 
 Para configurar GitHub Actions es tan sencillo como crear dentro de nuestro repositorio la carpeta `.github/worflows`. GitHub Actions viene ya integrado con GitHub. Su funcionamiento es simple, busca en la carpeta mencionada antes ficheros YAML las acciones a realizar.
 
