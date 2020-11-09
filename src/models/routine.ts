@@ -44,5 +44,12 @@ class Routine {
     }
     return -1;
   }
+
+  addDay(dayWork: DayWork): void {
+    if (this.searchDay(dayWork.day) != -1) {
+      throw new Error("You already train that day");
+    }
+    this._routine.push(dayWork);
+  }
 }
 export default Routine;

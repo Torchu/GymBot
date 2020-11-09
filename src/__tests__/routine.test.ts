@@ -124,4 +124,45 @@ describe("routine model test", () => {
       ]);
     }).toThrowError("that day");
   });
+  it("should let me add another day to the training", () => {
+    routine.addDay(
+      new DayWork(5, [
+        new Exercise("Curl Biceps", 15),
+        new Exercise("Triceps Polea", 20),
+      ])
+    );
+    expect(routine.routine).toEqual([
+      {
+        _day: 1,
+        exercises: [
+          { _weight: 50, name: "Press Banca" },
+          { _weight: 70, name: "Peso Muerto" },
+        ],
+      },
+      {
+        _day: 3,
+        exercises: [
+          { _weight: 20, name: "Dominadas" },
+          { _weight: 80, name: "Sentadilla" },
+        ],
+      },
+      {
+        _day: 5,
+        exercises: [
+          { _weight: 15, name: "Curl Biceps" },
+          { _weight: 20, name: "Triceps Polea" },
+        ],
+      },
+    ]);
+  });
+  it("should throw an error if you already train that day", () => {
+    expect(() => {
+      routine.addDay(
+        new DayWork(5, [
+          new Exercise("Curl Biceps", 15),
+          new Exercise("Triceps Polea", 20),
+        ])
+      );
+    }).toThrowError("already");
+  });
 });
