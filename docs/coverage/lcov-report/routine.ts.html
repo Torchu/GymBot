@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.43% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/23</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">31.82% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/22</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,35 +121,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -168,36 +168,36 @@ class Routine {
     this._routine = _routine;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  get r</span>outine(): DayWork[] {
-<span class="cstat-no" title="statement not covered" >    return this._routine;</span>
+  get routine(): DayWork[] {
+    return this._routine;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  set r</span>outine(newRoutine: DayWork[]) {
-    let controller: number[] = <span class="cstat-no" title="statement not covered" >[0, 0, 0, 0, 0, 0, 0];</span>
-<span class="cstat-no" title="statement not covered" >    for (var daywork of newRoutine) {</span>
-<span class="cstat-no" title="statement not covered" >      controller[daywork.day] += 1;</span>
-<span class="cstat-no" title="statement not covered" >      if (controller[daywork.day] &gt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error(`You can't work twice a day`);</span>
+  set routine(newRoutine: DayWork[]) {
+    let controller: number[] = [0, 0, 0, 0, 0, 0, 0];
+    for (var daywork of newRoutine) {
+      controller[daywork.day] += 1;
+      if (controller[daywork.day] &gt; 1) {
+        throw new Error(`You can't work twice a day`);
       }
     }
-<span class="cstat-no" title="statement not covered" >    this._routine = newRoutine;</span>
+    this._routine = newRoutine;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  modifyRoutine(</span>day: number, workout: Exercise[]): void {
-    const index = <span class="cstat-no" title="statement not covered" >this.searchDay(day);</span>
-<span class="cstat-no" title="statement not covered" >    if (index == -1) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new Error("You don't workout that day");</span>
+  modifyRoutine(day: number, workout: Exercise[]): void {
+    const index = this.searchDay(day);
+    if (index == -1) {
+      throw new Error("You don't workout that day");
     }
-<span class="cstat-no" title="statement not covered" >    this._routine[index].exercises = workout;</span>
+    this._routine[index].exercises = workout;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  searchDay(</span>day: number): number {
-<span class="cstat-no" title="statement not covered" >    for (var i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; this._routine.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      if (this._routine[i].day == day) {</span>
-<span class="cstat-no" title="statement not covered" >        return i;</span>
+  searchDay(day: number): number {
+    for (var i = 0; i &lt; this._routine.length; i++) {
+      if (this._routine[i].day == day) {
+        return i;
       }
     }
-<span class="cstat-no" title="statement not covered" >    return -1;</span>
+    return -1;
   }
 }
 export default Routine;
@@ -208,7 +208,7 @@ export default Routine;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Nov 09 2020 10:37:19 GMT+0100 (hora estándar de Europa central)
+                at Mon Nov 09 2020 11:15:27 GMT+0100 (hora estándar de Europa central)
             </div>
         </div>
         <script src="prettify.js"></script>
