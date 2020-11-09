@@ -11,13 +11,9 @@
 - **Comprobar el nivel de cobertura de los test:**
   > `npm run coverage`
 
-## Integración continua
-
-Las herramientas de integración continua seleccionadas han sido [Travis](docs/travis.md) y [GitHub Actions](docs/gh-actions.md). En los links están enlazados los ficheros que explican su configuración. A través del de Travis se puede acceder también a su fichero de configuración.
-
 ## Avance del código
 
-Se han creado las clases [DayWork](src/models/daywork.ts) y [Routine](src/models/routine.ts) que avanzan con la [historia de usuario 3](https://github.com/torchu/GymBot/issues/23). Ambas clases son unas pequeñas pinceladas para ir imaginando cómo serán dichas clases en un futuro.
+Nada esta semana (de momento)
 
 ## Documentación adicional
 
