@@ -1,2 +1,7 @@
 [build]
     functions = "./functions"
+
+[[redirects]]
+  from = "/print"
+  to = "/.netlify/functions/print"
+  status = 200
