@@ -38,3 +38,9 @@ En este documento se irán describiendo los distintos pasos en la realización d
 - Crearse una cuenta en Travis y activar la integración continua para nuestro repositorio.
 - Configurar travis en nuestro repositorio para que pueda hacer los test.
 - Configurar otra herramienta de integración continua secundaria.
+
+## [Serverless Computing](https://github.com/Torchu/GymBot/milestone/5)
+
+- Crearse una cuenta en Netlify.
+- Crear una función para que se ejecute de forma serverless en Netlify
+- Conectar nuestra función con Netlify.
