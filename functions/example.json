@@ -1,0 +1,46 @@
+{
+  "Example routine": {
+    "monday": [
+      {
+        "exercise": "Press Banca",
+        "weight": 40
+      },
+      {
+        "exercise": "Press Militar",
+        "weight": 30
+      },
+      {
+        "exercise": "Flexiones",
+        "weight": 0
+      }
+    ],
+    "wednesday": [
+      {
+        "exercise": "Dominadas",
+        "weight": 0
+      },
+      {
+        "exercise": "Remo Barra",
+        "weight": 30
+      },
+      {
+        "exercise": "Jalón al pecho",
+        "weight": 40
+      }
+    ],
+    "friday": [
+      {
+        "exercise": "Sentadillas",
+        "weight": 80
+      },
+      {
+        "exercise": "Peso Muerto",
+        "weight": 70
+      },
+      {
+        "exercise": "Abdominales",
+        "weight": 0
+      }
+    ]
+  }
+}
