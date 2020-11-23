@@ -1,5 +1,4 @@
-import { callbackify } from "util";
-import Exercise from "../src/models/exercise";
+/*import Exercise from "../src/models/exercise";
 import Routine from "../src/models/routine";
 const test = new Routine(
   [
@@ -21,12 +20,11 @@ const test = new Routine(
   ],
   [],
   []
-);
+);*/
 
-exports.handler = async function (event, context, callback) {
-  const response = test;
+exports.handler = function (event, context, callback) {
   callback(null, {
     statusCode: 200,
-    body: JSON.stringify(response),
+    body: JSON.stringify({ message: "Healthy :D" }),
   });
 };
