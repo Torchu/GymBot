@@ -1,168 +1,38 @@
-import DayWork from "../models/daywork";
 import Routine from "../models/routine";
 import Exercise from "../models/exercise";
 
-const routine = new Routine([
-  new DayWork(1, [
-    new Exercise("Press Banca", 40),
-    new Exercise("Peso Muerto", 70),
-  ]),
-  new DayWork(2, [
-    new Exercise("Press Banca", 40),
-    new Exercise("Peso Muerto", 70),
-  ]),
-]);
+const routine = new Routine(
+  [new Exercise("Press Banca", 40), new Exercise("Peso Muerto", 70)],
+  [new Exercise("Press Banca", 40), new Exercise("Peso Muerto", 70)],
+  [],
+  [],
+  [],
+  [],
+  []
+);
 
-describe("routine model test", () => {
-  it("should throw an error while creating an instance", () => {
+describe("routine model tests", () => {
+  it("should return the work of a day", () => {
+    expect(routine.getDay(1)).toEqual([
+      { _weight: 40, name: "Press Banca" },
+      { _weight: 70, name: "Peso Muerto" },
+    ]);
+  });
+
+  it("should throw an error while getting the work of a day", () => {
     expect(() => {
-      const failRoutine = new Routine([
-        new DayWork(1, [
-          new Exercise("Press Banca", 40),
-          new Exercise("Peso Muerto", 70),
-        ]),
-        new DayWork(1, [
-          new Exercise("Press Banca", 40),
-          new Exercise("Peso Muerto", 70),
-        ]),
-      ]);
-    }).toThrowError("twice");
+      routine.getDay(8);
+    }).toThrowError("not a day");
   });
-  it("should return the routine", () => {
-    expect(routine.routine).toEqual([
-      {
-        _day: 1,
-        exercises: [
-          { _weight: 40, name: "Press Banca" },
-          { _weight: 70, name: "Peso Muerto" },
-        ],
-      },
-      {
-        _day: 2,
-        exercises: [
-          { _weight: 40, name: "Press Banca" },
-          { _weight: 70, name: "Peso Muerto" },
-        ],
-      },
-    ]);
+
+  it("should let me change the work of a day", () => {
+    routine.setDay(2, []);
+    expect(routine.getDay(2)).toEqual([]);
   });
-  it("should let me change the routine", () => {
-    routine.routine = [
-      new DayWork(1, [
-        new Exercise("Press Banca", 50),
-        new Exercise("Peso Muerto", 70),
-      ]),
-      new DayWork(3, [
-        new Exercise("Press Banca", 50),
-        new Exercise("Peso Muerto", 70),
-      ]),
-    ];
-    expect(routine.routine).toEqual([
-      {
-        _day: 1,
-        exercises: [
-          { _weight: 50, name: "Press Banca" },
-          { _weight: 70, name: "Peso Muerto" },
-        ],
-      },
-      {
-        _day: 3,
-        exercises: [
-          { _weight: 50, name: "Press Banca" },
-          { _weight: 70, name: "Peso Muerto" },
-        ],
-      },
-    ]);
-  });
-  it("should throw an error while changing the routine", () => {
+
+  it("should throw an error while setting the work of a day", () => {
     expect(() => {
-      routine.routine = [
-        new DayWork(1, [
-          new Exercise("Press Banca", 40),
-          new Exercise("Peso Muerto", 70),
-        ]),
-        new DayWork(1, [
-          new Exercise("Press Banca", 40),
-          new Exercise("Peso Muerto", 70),
-        ]),
-      ];
-    }).toThrowError("twice");
-  });
-  it("should return the index of a day", () => {
-    expect(routine.searchDay(3)).toBe(1);
-  });
-  it("should return -1 because there's no index asociated to that day", () => {
-    expect(routine.searchDay(2)).toBe(-1);
-  });
-  it("should let me modify the routine", () => {
-    routine.modifyRoutine(3, [
-      new Exercise("Dominadas", 20),
-      new Exercise("Sentadilla", 80),
-    ]);
-    expect(routine.routine).toEqual([
-      {
-        _day: 1,
-        exercises: [
-          { _weight: 50, name: "Press Banca" },
-          { _weight: 70, name: "Peso Muerto" },
-        ],
-      },
-      {
-        _day: 3,
-        exercises: [
-          { _weight: 20, name: "Dominadas" },
-          { _weight: 80, name: "Sentadilla" },
-        ],
-      },
-    ]);
-  });
-  it("should throw an error while modifying an unexisting day", () => {
-    expect(() => {
-      routine.modifyRoutine(2, [
-        new Exercise("Dominadas", 20),
-        new Exercise("Sentadilla", 80),
-      ]);
-    }).toThrowError("that day");
-  });
-  it("should let me add another day to the training", () => {
-    routine.addDay(
-      new DayWork(5, [
-        new Exercise("Curl Biceps", 15),
-        new Exercise("Triceps Polea", 20),
-      ])
-    );
-    expect(routine.routine).toEqual([
-      {
-        _day: 1,
-        exercises: [
-          { _weight: 50, name: "Press Banca" },
-          { _weight: 70, name: "Peso Muerto" },
-        ],
-      },
-      {
-        _day: 3,
-        exercises: [
-          { _weight: 20, name: "Dominadas" },
-          { _weight: 80, name: "Sentadilla" },
-        ],
-      },
-      {
-        _day: 5,
-        exercises: [
-          { _weight: 15, name: "Curl Biceps" },
-          { _weight: 20, name: "Triceps Polea" },
-        ],
-      },
-    ]);
-  });
-  it("should throw an error if you already train that day", () => {
-    expect(() => {
-      routine.addDay(
-        new DayWork(5, [
-          new Exercise("Curl Biceps", 15),
-          new Exercise("Triceps Polea", 20),
-        ])
-      );
-    }).toThrowError("already");
+      routine.setDay(0, []);
+    }).toThrowError("not a day");
   });
 });
