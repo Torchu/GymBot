@@ -1,7 +1,7 @@
 # :muscle: GymBot :muscle:
 
 ![](https://travis-ci.com/torchu/GymBot.svg?branch=master)
-![Netlify Status](https://api.netlify.com/api/v1/badges/7ffc8a11-8132-4fa5-9fdd-94b96b311da0/deploy-status)](https://app.netlify.com/sites/gymbot/deploys)
+![Netlify Status](https://api.netlify.com/api/v1/badges/7ffc8a11-8132-4fa5-9fdd-94b96b311da0/deploy-status)
 
 ## Comandos
 
