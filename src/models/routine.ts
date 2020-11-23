@@ -1,55 +1,64 @@
-import DayWork from "./daywork";
 import Exercise from "./exercise";
+
 class Routine {
-  private _routine: DayWork[];
-  constructor(_routine: DayWork[]) {
-    let controller: number[] = [0, 0, 0, 0, 0, 0, 0];
-    for (var daywork of _routine) {
-      controller[daywork.day] += 1;
-      if (controller[daywork.day] > 1) {
-        throw new Error(`You can't work twice a day`);
-      }
+  constructor(
+    public monday: Exercise[],
+    public tuesday: Exercise[],
+    public wednesday: Exercise[],
+    public thursday: Exercise[],
+    public friday: Exercise[],
+    public saturday: Exercise[],
+    public sunday: Exercise[]
+  ) {}
+
+  getDay(day: number): Exercise[] {
+    switch (day) {
+      case 1:
+        return this.monday;
+      case 2:
+        return this.tuesday;
+      case 3:
+        return this.wednesday;
+      case 4:
+        return this.thursday;
+      case 5:
+        return this.friday;
+      case 6:
+        return this.saturday;
+      case 7:
+        return this.sunday;
+      default:
+        throw new Error("That's not a day");
     }
-    this._routine = _routine;
   }
 
-  get routine(): DayWork[] {
-    return this._routine;
-  }
-
-  set routine(newRoutine: DayWork[]) {
-    let controller: number[] = [0, 0, 0, 0, 0, 0, 0];
-    for (var daywork of newRoutine) {
-      controller[daywork.day] += 1;
-      if (controller[daywork.day] > 1) {
-        throw new Error(`You can't work twice a day`);
-      }
+  setDay(day: number, work: Exercise[]): void {
+    switch (day) {
+      case 1:
+        this.monday = work;
+        break;
+      case 2:
+        this.tuesday = work;
+        break;
+      case 3:
+        this.wednesday = work;
+        break;
+      case 4:
+        this.thursday = work;
+        break;
+      case 5:
+        this.friday = work;
+        break;
+      case 6:
+        this.saturday = work;
+        break;
+      case 7:
+        this.sunday = work;
+        break;
+      default:
+        throw new Error("That's not a day");
     }
-    this._routine = newRoutine;
-  }
-
-  modifyRoutine(day: number, workout: Exercise[]): void {
-    const index = this.searchDay(day);
-    if (index == -1) {
-      throw new Error("You don't workout that day");
-    }
-    this._routine[index].exercises = workout;
-  }
-
-  searchDay(day: number): number {
-    for (var i = 0; i < this._routine.length; i++) {
-      if (this._routine[i].day == day) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  addDay(dayWork: DayWork): void {
-    if (this.searchDay(dayWork.day) != -1) {
-      throw new Error("You already train that day");
-    }
-    this._routine.push(dayWork);
   }
 }
+
 export default Routine;
