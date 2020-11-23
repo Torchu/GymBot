@@ -3,5 +3,5 @@ taskfile: package.json
 test: jest.config.js
 entidad:
   - src/models/exercise.ts
-  - src/models/daywork.ts
   - src/models/routine.ts
+URL: https://gymbot.netlify.app/print

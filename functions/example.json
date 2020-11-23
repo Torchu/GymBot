@@ -14,7 +14,6 @@
         "weight": 0
       }
     ],
-    "tuesday": [],
     "wednesday": [
       {
         "exercise": "Dominadas",
@@ -29,7 +28,6 @@
         "weight": 40
       }
     ],
-    "thursday": [],
     "friday": [
       {
         "exercise": "Sentadillas",
@@ -43,8 +41,6 @@
         "exercise": "Abdominales",
         "weight": 0
       }
-    ],
-    "saturday": [],
-    "sunday": []
+    ]
   }
 }
