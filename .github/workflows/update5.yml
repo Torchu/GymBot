@@ -1,8 +1,8 @@
-name: "Updates workday"
+name: "Updates 5.JSON"
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "1 0 * * *"
 
 jobs:
   updatetoday:
@@ -10,20 +10,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: SetUp Node 15
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "15"
-      - run: npm install
-      - run: npm run build
-      - name: Print today
-        run: npm run today
+      - name: Update 5
+        run: curl -sb -H "Accept':' application/json" https://gymbot.netlify.app/print > 5.json
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GymbotUpdate-Bot"
           git add functions/today.json 5.json
-          git commit -m "`date +'%d/%m/%Y'` workout updated"
+          git commit -m "`date +'%d/%m/%Y'` 5.json updated"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
