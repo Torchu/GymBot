@@ -23,12 +23,12 @@ Una vez en nuestro dashboard, haremos click en el botón _new site from Git_ y l
 Se nos habrá creado un proyecto con un dominio genérico, por lo que iremos a cambiarle el nombre a _Domain settings > Custom domains > Options > Edit site name_ y le pondremos el nombre de nuestro proyecto.
 
 La configuración del despliegue se hace desde el fichero netlify.toml mencionado al principio.
-![](docs/img/basic-netlify-conf)
+![](docs/img/basic-netlify-conf.png)
 
 Aquí podemos ver una configuración básica de Netlify, en la que especificamos la ruta de nuestra carpeta [functions](functions) en la que están las funciones que van a ser desplegadas en nuestro FaaS.
 
 En este caso, he optado por incluir algo más de configuración, añadiendo una redirección para acortar la ruta a nuestra función y que sea más sencillo de acceder a ella. Este sería el resultado final:
-![](docs/img/final-netlify-conf)
+![](docs/img/final-netlify-conf.png)
 
 Como función serverless se ha creado una [función](functions/print.js) que imprime el contenido del fichero [today.json](functions/today.json). En este fichero se almacena el resultado de la función `routine.printToday()` de nuestra [rutina de ejemplo](assets/example_routine.ts) que imprimirá los ejercicios que nos toca realizar hoy. Estos datos se actualizan cada día con una GitHub Action.
 
