@@ -17,10 +17,11 @@
   },
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "nodemon src/app.ts",
+    "dev": "node src/app.ts",
     "build": "tsc -p .",
     "test": "jest",
-    "coverage": "jest --coverage --coverageDirectory='docs/coverage' --no-cache && xdg-open docs/coverage/lcov-report/index.html"
+    "coverage": "jest --coverage --coverageDirectory='docs/coverage' --no-cache && xdg-open docs/coverage/lcov-report/index.html",
+    "today": "node dist/assets/example_routine.js > functions/today.json"
   },
   "repository": {
     "type": "git",

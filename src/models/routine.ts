@@ -59,6 +59,19 @@ class Routine {
         throw new Error("That's not a day");
     }
   }
+
+  printToday(): string {
+    const now = new Date();
+    const day = now.getDay();
+    const today = this.getDay(day);
+    var res = "";
+    for (var i = 0; i < today.length; i++) {
+      res = res.concat(today[i].print() + "\n");
+    }
+    if (res == "") res = "Hoy descansas";
+
+    return res;
+  }
 }
 
 export default Routine;

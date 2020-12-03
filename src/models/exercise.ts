@@ -25,6 +25,10 @@ class Exercise {
     }
     this._weight += increase;
   }
+
+  print(): string {
+    return `${this.name} -----> ${this.weight} Kg`;
+  }
 }
 
 export default Exercise;

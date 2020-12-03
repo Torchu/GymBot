@@ -1,0 +1,31 @@
+name: "Updates workday"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  updatetoday:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: SetUp Node 15
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "15"
+      - run: npm install
+      - run: npm run build
+      - name: Print today
+        run: npm run today
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GymbotUpdate-Bot"
+          git add functions/today.json
+          git commit -m "`date +'%d/%m/%Y'` workout updated"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

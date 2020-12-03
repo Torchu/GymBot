@@ -30,7 +30,9 @@ Aquí podemos ver una configuración básica de Netlify, en la que especificamos
 En este caso, he optado por incluir algo más de configuración, añadiendo una redirección para acortar la ruta a nuestra función y que sea más sencillo de acceder a ella. Este sería el resultado final:
 ![](docs/img/final-netlify-conf.png)
 
-Como función serverless se ha creado una [función](functions/print.js) que imprime el contenido del fichero [today.json](functions/today.json). En este fichero se almacena el resultado de la función `routine.printToday()` de nuestra [rutina de ejemplo](assets/example_routine.ts) que imprimirá los ejercicios que nos toca realizar hoy. Estos datos se actualizan cada día con una GitHub Action.
+Como función serverless se ha creado una [función](functions/print.js) que imprime el contenido del fichero [today.json](functions/today.json). En este fichero se almacena el resultado de la función `printToday()` de nuestra [rutina de ejemplo](assets/example_routine.ts) que imprimirá los ejercicios que nos toca realizar hoy. Estos datos se actualizan cada día con una [GitHub Action](.github/workflows/updateToday.yml).
+
+Nuestra GH Action preparará un contenedor de node en el que ejecutará el comando `npm run today` que ejecutará la función descrita en el párrafo anterior y pusheará los cambios a nuestro repositorio.
 
 El resultado de la función se puede ver desde la [web](https://gymbot.netlify.app/print) o en este [fichero](5.json).
 
@@ -38,7 +40,7 @@ Se ha modificado el fichero [iv.yaml](iv.yaml) para que incluya la ruta de nuest
 
 ## Avance del código
 
-Aparte de lo mencionado arriba, se ha reformado el modelo [Routine](src/models/routine.ts) para hacerlo más entendible y sencillo de operar con él. Esta reforma ha implicado el borrado del modelo Daywork.
+Aparte de lo mencionado arriba, se ha reformado el modelo [Routine](src/models/routine.ts) para hacerlo más entendible y sencillo de operar con él. Esta reforma ha implicado el borrado del modelo Daywork. Para poder realizar la función de print se ha añadido una función que transforma un ejercicio a string y otra que imprime los ejercicios de hoy de la rutina. Esta última es la que es llamada por `printToday()`.
 
 ## Documentación adicional
 
