@@ -16,9 +16,21 @@
 
 Se ha escogido Netlify ya que me resultó más cómodo durante la realización de los ejercicios y toda la configuración queda en un [fichero](netlify.toml), por lo que es fácilmente legible. Además, nos permite acortar las rutas de nuestros recursos.
 
-La conexión entre el repositorio en GitHub y netlify está hecha mediante la interfaz web de netlify. La conexión se ha hecho sobre la rama netlify de mi repositorio, de forma que si añado algún cambio que no tiene nada que ver con las funciones serverless, no afecte a las mismas.
+La conexión entre el repositorio en GitHub y netlify está hecha mediante la interfaz web de netlify. Para ello, es tan sencillo como registrarse en netlify con tu cuenta de GitHub y darle los permisos que te vaya pidiendo como en el resto de plataformas con las que hemos trabajado durante el desarrollo del proyecto. En mi caso, solo le ha dado permisos sobre el repositorio de este proyecto.
 
-Como función serverless se ha creado una [función](functions/print.js) que imprime una rutina. Esta función ahora mismo imprime lo que hay en el fichero [example.json](functions/example.json), pero el objetivo es que lo que hay en ese fichero sea generado por una función de la clase Routine. No se ha hecho de esta manera ya que Netlify no me dejaba importar clases externas a la carpeta functions, aunque si en el futuro se montase toda la aplicación como una aplicación serverless, se buscaría la forma de que se pudiese hacer de esa manera. De momento, sirve como preview.
+Una vez en nuestro dashboard, haremos click en el botón _new site from Git_ y lo conectaremos con nuestro repositorio siguiendo los pasos.
+
+Se nos habrá creado un proyecto con un dominio genérico, por lo que iremos a cambiarle el nombre a _Domain settings > Custom domains > Options > Edit site name_ y le pondremos el nombre de nuestro proyecto.
+
+La configuración del despliegue se hace desde el fichero netlify.toml mencionado al principio.
+![](docs/img/basic-netlify-conf)
+
+Aquí podemos ver una configuración básica de Netlify, en la que especificamos la ruta de nuestra carpeta [functions](functions) en la que están las funciones que van a ser desplegadas en nuestro FaaS.
+
+En este caso, he optado por incluir algo más de configuración, añadiendo una redirección para acortar la ruta a nuestra función y que sea más sencillo de acceder a ella. Este sería el resultado final:
+![](docs/img/final-netlify-conf)
+
+Como función serverless se ha creado una [función](functions/print.js) que imprime el contenido del fichero [today.json](functions/today.json). En este fichero se almacena el resultado de la función `routine.printToday()` de nuestra [rutina de ejemplo](assets/example_routine.ts) que imprimirá los ejercicios que nos toca realizar hoy. Estos datos se actualizan cada día con una GitHub Action.
 
 El resultado de la función se puede ver desde la [web](https://gymbot.netlify.app/print) o en este [fichero](5.json).
 
@@ -26,7 +38,7 @@ Se ha modificado el fichero [iv.yaml](iv.yaml) para que incluya la ruta de nuest
 
 ## Avance del código
 
-Se ha reformado el modelo [Routine](src/models/routine.ts) para hacerlo más entendible y sencillo de operar con él. Esta reforma ha implicado el borrado del modelo Daywork.
+Aparte de lo mencionado arriba, se ha reformado el modelo [Routine](src/models/routine.ts) para hacerlo más entendible y sencillo de operar con él. Esta reforma ha implicado el borrado del modelo Daywork.
 
 ## Documentación adicional
 

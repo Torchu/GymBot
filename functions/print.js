@@ -1,4 +1,4 @@
-const data = require("./example.json");
+const data = require("./today.json");
 
 exports.handler = function (event, context, callback) {
   callback(null, {
