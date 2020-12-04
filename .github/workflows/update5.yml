@@ -16,7 +16,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GymbotUpdate-Bot"
-          git add functions/today.json 5.json
+          git add 5.json
           git commit -m "`date +'%d/%m/%Y'` 5.json updated"
       - name: Push changes
         uses: ad-m/github-push-action@master

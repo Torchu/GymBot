@@ -1,8 +1,6 @@
 name: "Updates workday"
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+on: [push]
 
 jobs:
   updatetoday:
@@ -11,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: SetUp Node 15
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v1
         with:
           node-version: "15"
       - name: Install dependencies
@@ -24,7 +22,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GymbotUpdate-Bot"
-          git add functions/today.json 5.json
+          git add functions/today.json
           git commit -m "`date +'%d/%m/%Y'` workout updated"
       - name: Push changes
         uses: ad-m/github-push-action@master
