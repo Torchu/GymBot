@@ -60,15 +60,19 @@ class Routine {
     }
   }
 
-  printToday(): string {
+  printToday(): string[] {
     const now = new Date();
     const day = now.getDay();
     const today = this.getDay(day);
-    var res = "";
-    for (var i = 0; i < today.length; i++) {
-      res = res.concat(today[i].print() + "\n");
+    if (today.length > 0) {
+      var res = new Array(today.length);
+      for (var i = 0; i < today.length; i++) {
+        res[i] = today[i].print();
+      }
+    } else {
+      var res = new Array(1);
+      res[0] = "Hoy descansas";
     }
-    if (res == "") res = "Hoy descansas";
 
     return res;
   }
