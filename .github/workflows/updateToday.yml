@@ -1,8 +1,6 @@
 name: "Updates workday"
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+on: [push]
 
 jobs:
   updatetoday:

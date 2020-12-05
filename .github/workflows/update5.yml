@@ -1,8 +1,6 @@
 name: "Updates 5.JSON"
 
-on:
-  schedule:
-    - cron: "1 0 * * *"
+on: [push]
 
 jobs:
   updatetoday:
@@ -10,6 +8,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Pull changes
+        run: git pull --force
       - name: Update 5
         run: curl -sb -H "Accept':' application/json" https://gymbot.netlify.app/print > 5.json
       - name: Commit changes
