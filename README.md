@@ -27,4 +27,5 @@ Además, es el framework web por excelencia en Node debido a su velocidad y mini
 - [Herramientas utilizadas](docs/herramientas.md)
 - [Configuración de docker](docs/docker.md)
 - [Configuración de CI](docs/ci.md)
+- [Configuración Serverless](docs/serverless.md)
 - [Problemas encontrados durante el desarrollo del proyecto y sus soluciones](docs/errors.md)
