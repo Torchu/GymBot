@@ -44,3 +44,8 @@ En este documento se irán describiendo los distintos pasos en la realización d
 - Crearse una cuenta en Netlify.
 - Crear una función para que se ejecute de forma serverless en Netlify
 - Conectar nuestra función con Netlify.
+
+## [Microservicios](https://github.com/Torchu/GymBot/milestone/6)
+
+- Crear rutas para los microservicios.
+- Configurar comandos del gestor de tareas.
