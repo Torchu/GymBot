@@ -27,8 +27,8 @@ Para las rutinas, vamos a crear una ["base de datos local provisional"](db/routi
 Se definen en la ruta /routine las operaciones CRUD para nuestra rutina:
 
 - CREATE: No hay método POST definido, ya que no puedes crear más rutinas, si no que se trabaja modificando la existente.
-- READ: El método GET devuelve el fichero JSON almacenado.
-- UPDATE: El método PUT recibe como datos un JSON que transforma en un objeto de la clase Routine, para validar que tiene la estructura correcta, y después lo guarda en nuestro fichero JSON transformado en JSON de nuevo.
+- READ: El método GET devuelve el fichero JSON almacenado. [HU01](https://github.com/Torchu/GymBot/issues/2) [HU06](https://github.com/torchu/GymBot/issues/30)
+- UPDATE: El método PUT recibe como datos un JSON que transforma en un objeto de la clase Routine, para validar que tiene la estructura correcta, y después lo guarda en nuestro fichero JSON transformado en JSON de nuevo. [HU03](https://github.com/torchu/GymBot/issues/23) [HU04](https://github.com/torchu/GymBot/issues/26)
 - DELETE: El método DELETE crea una instancia vacía de la clase Routine y la almacena en nuestro fichero JSON.
 
 También se establecerá una ruta /print, que como en la funcionalidad del hito anterior, nos devolverá los ejercicios que nos toque realizar hoy, pero esta vez según la rutina configurada y no sobre la rutina de ejemplo que se creó como preview.

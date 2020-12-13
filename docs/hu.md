@@ -5,3 +5,4 @@
 - [HU03](https://github.com/torchu/GymBot/issues/23)
 - [HU04](https://github.com/torchu/GymBot/issues/26)
 - [HU05](https://github.com/torchu/GymBot/issues/28)
+- [HU06](https://github.com/torchu/GymBot/issues/30)
