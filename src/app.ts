@@ -1,6 +1,6 @@
 import fs from "fs";
 import Routine from "./models/routine";
-import Exercise from "./models/exercise";
+import { routineParser } from "./middleware/routine.parser";
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -9,16 +9,6 @@ const port = process.env.port || 8080;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-const example = new Routine(
-  [new Exercise("Press Banca", 40), new Exercise("Peso Muerto", 70)],
-  [],
-  [new Exercise("Press Banca", 40), new Exercise("Peso Muerto", 70)],
-  [],
-  [new Exercise("Press Banca", 40), new Exercise("Peso Muerto", 70)],
-  [],
-  []
-);
 
 //INDEX
 app.get("/", (req: any, res: any) => {
@@ -53,18 +43,9 @@ app.delete("/routine", (req: any, res: any) => {
 //CRUD: READ method
 //Recoge la rutina de la base de datos, transformándola en un objeto de clase Routine y devuelve el resultado de la función printToday()
 app.get("/print", (req: any, res: any) => {
-  const data = JSON.stringify(example);
-  const obj = JSON.parse(data);
-  let r = new Routine(
-    obj.monday,
-    obj.tuesday,
-    obj.wednesday,
-    obj.thursday,
-    obj.friday,
-    obj.saturday,
-    obj.sunday
-  );
-  res.send(JSON.stringify(example.printToday()));
+  const data = fs.readFileSync("db/routine.json", "utf8");
+  const routine = routineParser(data);
+  res.send(routine.printToday());
 });
 
 app.listen(port, () => {
