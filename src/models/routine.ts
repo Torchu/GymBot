@@ -25,7 +25,7 @@ class Routine {
         return this.friday;
       case 6:
         return this.saturday;
-      case 7:
+      case 0:
         return this.sunday;
       default:
         throw new Error("That's not a day");
@@ -52,7 +52,7 @@ class Routine {
       case 6:
         this.saturday = work;
         break;
-      case 7:
+      case 0:
         this.sunday = work;
         break;
       default:

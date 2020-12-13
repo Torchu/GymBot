@@ -5,3 +5,4 @@ entidad:
   - src/models/exercise.ts
   - src/models/routine.ts
 URL: https://gymbot.netlify.app/print
+make: npm run
