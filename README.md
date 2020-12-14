@@ -31,7 +31,7 @@ Se definen en la ruta /routine las operaciones CRUD para nuestra rutina:
 - UPDATE: El método PUT recibe como datos un JSON que transforma en un objeto de la clase Routine, para validar que tiene la estructura correcta, y después lo guarda en nuestro fichero JSON transformado en JSON de nuevo. [HU03](https://github.com/torchu/GymBot/issues/23) [HU04](https://github.com/torchu/GymBot/issues/26)
 - DELETE: El método DELETE crea una instancia vacía de la clase Routine y la almacena en nuestro fichero JSON.
 
-También se establecerá una ruta /print, que como en la funcionalidad del hito anterior, nos devolverá los ejercicios que nos toque realizar hoy, pero esta vez según la rutina configurada y no sobre la rutina de ejemplo que se creó como preview.
+También se establecerá una ruta /print, que como en la funcionalidad de la entrega anterior, nos devolverá los ejercicios que nos toque realizar hoy, pero esta vez según la rutina configurada y no sobre la rutina de ejemplo que se creó como preview.
 
 ## Middleware
 
