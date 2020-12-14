@@ -22,7 +22,7 @@ Además, es el framework web por excelencia en Node debido a su velocidad y mini
 
 Para el diseño de las [rutas](src/app.ts), crearemos una ruta principal que te de la bienvenida a la aplicación.
 
-Para las rutinas, vamos a crear una ["base de datos local provisional"](db/routine.json), que consistirá en un fichero JSON en el que almacenaremos los datos de la rutina del usuario local. Se guarda en un fichero, porque cada usuario puede tener únicamente una rutina y ya que no hay montado un sistema de usuarios, si no que solo existe el usuario local, no merece la pena crear, de momento, una base de datos para guardar una instancia de un objeto.
+Se guardará en memoria la instancia de la clase Routine con la que trabajaremos, ya que aún no vamos a usar bases de datos.
 
 Se definen en la ruta /routine las operaciones CRUD para nuestra rutina:
 

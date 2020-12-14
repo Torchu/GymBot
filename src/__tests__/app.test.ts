@@ -9,8 +9,7 @@ describe("Routes tests", () => {
   });
 
   it("should give you the routine", async () => {
-    const result = require("../../db/routine.json");
-    await request(app).get("/routine").expect(200).expect(result);
+    await request(app).get("/routine").expect(200).expect({"monday":[],"tuesday":[],"wednesday":[],"thursday":[],"friday":[],"saturday":[],"sunday":[]});
   });
 
   it("should modify the routine", async () => {
