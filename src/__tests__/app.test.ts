@@ -8,13 +8,13 @@ describe("Routes tests", () => {
     expect(response.body.message).toEqual("Welcome to GymBot");
   });
 
-  it("should give you the routine", async (done) => {
+  it("should give you the routine", async () => {
     const result = require("../../db/routine.json");
-    request(apps).get("/routine").expect(200).expect(result, done);
+    await request(apps).get("/routine").expect(200).expect(result);
   });
 
-  it("should modify the routine", async (done) => {
-    request(apps)
+  it("should modify the routine", async () => {
+    await request(apps)
       .put("/routine")
       .send({
         monday: [
@@ -34,18 +34,18 @@ describe("Routes tests", () => {
         saturday: [],
         sunday: [],
       })
-      .expect(200, done);
+      .expect(200);
   });
 
-  it("should clean the routine", async (done) => {
-    request(apps)
+  it("should clean the routine", async () => {
+    await request(apps)
       .delete("/routine")
       .expect(200)
-      .expect('"La rutina ha sido borrada"', done);
+      .expect('"La rutina ha sido borrada"');
   });
 
   it("should give today's work", async () => {
-    request(apps).get("/print").expect(200);
+    await request(apps).get("/print").expect(200);
   });
 
   afterAll(async () => {

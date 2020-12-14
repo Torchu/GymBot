@@ -36,7 +36,7 @@ app.put("/routine", (req: any, res: any) => {
 //Crea una rutina vacía y la guarda sobreescribiendo la actual
 app.delete("/routine", (req: any, res: any) => {
   const r = new Routine([], [], [], [], [], [], []);
-  fs.writeFile("db/routine.json", JSON.stringify(r), "utf-8", () => {});
+  fs.writeFileSync("db/routine.json", JSON.stringify(r), "utf-8");
   res.send(JSON.stringify("La rutina ha sido borrada"));
 });
 
