@@ -1,7 +1,7 @@
 FROM node:14.14.0-stretch-slim
 LABEL version "1.0" mantainer="Torchu"
 
-RUN npm i -g jest ts-jest ts-node typescript supertest && mkdir /node_modules && chmod 755 /node_modules && chown node /node_modules
+RUN npm i -g jest ts-jest ts-node typescript supertest grunt-cli grunt grunt-run && mkdir /node_modules && chmod 755 /node_modules && chown node /node_modules
 
 USER node
 COPY --chown=node package*.json ./
