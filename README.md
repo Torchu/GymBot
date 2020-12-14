@@ -41,7 +41,7 @@ También utilizamos un [parser propio](src/middleware/routine.parser.ts) que tra
 
 ## Test de integración
 
-Los test de integración de las rutas se pueden consultar [aquí](src/__tests__/app.test.ts).
+Los test de integración de las rutas se pueden consultar en el siguiente [fichero](src/__tests__/app.test.ts).
 
 ## Documentación adicional
 
