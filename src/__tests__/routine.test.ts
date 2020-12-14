@@ -32,7 +32,7 @@ describe("routine model tests", () => {
 
   it("should throw an error while setting the work of a day", () => {
     expect(() => {
-      routine.setDay(0, []);
+      routine.setDay(8, []);
     }).toThrowError("not a day");
   });
 });
