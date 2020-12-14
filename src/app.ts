@@ -19,7 +19,7 @@ app.get("/", (req: any, res: any) => {
 //Lee el fichero JSON con la rutina y lo imprime
 app.get("/routine", (req: any, res: any) => {
   const routine = fs.readFileSync("db/routine.json", "utf8");
-  res.send(routine);
+  res.send(JSON.parse(routine));
 });
 
 //CRUD: UPDATE method
@@ -27,8 +27,9 @@ app.get("/routine", (req: any, res: any) => {
 //Si son válidos los guarda en el fichero JSON, si no, devuelve un error
 app.put("/routine", (req: any, res: any) => {
   const data = JSON.stringify(req.body);
-  fs.writeFileSync("db/routine.json", data, "utf8");
-  res.send(JSON.stringify("Rutina almacenada con éxito"));
+  const routine = routineParser(data);
+  fs.writeFileSync("db/routine.json", JSON.stringify(routine), "utf8");
+  res.send(req.body);
 });
 
 //CRUD: DELETE method

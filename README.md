@@ -39,6 +39,10 @@ Como middleware se utiliza el módulo `body-parser` que transforma el cuerpo de 
 
 También utilizamos un [parser propio](src/middleware/routine.parser.ts) que transforma una string en formato JSON en un objeto de la clase Routine. Se ha tenido que realizar un parser propio, ya que la función `Object.assign` nos creaba una instancia de la clase Routine en la que no podíamos acceder a las funciones de las instancias de Exercise que la componen.
 
+## Test de integración
+
+Los test de integración de las rutas se pueden consultar [aquí](src/__tests__/app.test.ts).
+
 ## Documentación adicional
 
 - [Configuración de git](docs/git-config.md)
