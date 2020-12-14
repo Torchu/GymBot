@@ -34,7 +34,6 @@ describe("Routes tests", () => {
         saturday: [],
         sunday: [],
       })
-      .expect("Content-Type", /json/)
       .expect(200, done);
   });
 
@@ -47,5 +46,9 @@ describe("Routes tests", () => {
 
   it("should give today's work", async () => {
     request(app).get("/print").expect(200);
+  });
+
+  afterAll(async () => {
+    await app.close();
   });
 });
