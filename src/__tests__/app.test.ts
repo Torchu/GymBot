@@ -47,8 +47,4 @@ describe("Routes tests", () => {
   it("should give today's work", async () => {
     await request(app).get("/print").expect(200);
   });
-
-  afterAll(async () => {
-    await app.close();
-  });
 });
