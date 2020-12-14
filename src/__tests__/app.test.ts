@@ -1,20 +1,20 @@
 const request = require("supertest");
-const apps = require("../app");
+const app = require("../app");
 
 describe("Routes tests", () => {
   it("should greet you", async () => {
-    const response = await request(apps).get("/");
+    const response = await request(app).get("/");
     expect(response.status).toBe(200);
     expect(response.body.message).toEqual("Welcome to GymBot");
   });
 
   it("should give you the routine", async () => {
     const result = require("../../db/routine.json");
-    await request(apps).get("/routine").expect(200).expect(result);
+    await request(app).get("/routine").expect(200).expect(result);
   });
 
   it("should modify the routine", async () => {
-    await request(apps)
+    await request(app)
       .put("/routine")
       .send({
         monday: [
@@ -38,17 +38,17 @@ describe("Routes tests", () => {
   });
 
   it("should clean the routine", async () => {
-    await request(apps)
+    await request(app)
       .delete("/routine")
       .expect(200)
       .expect('"La rutina ha sido borrada"');
   });
 
   it("should give today's work", async () => {
-    await request(apps).get("/print").expect(200);
+    await request(app).get("/print").expect(200);
   });
 
   afterAll(async () => {
-    await apps.close();
+    await app.close();
   });
 });

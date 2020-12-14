@@ -5,7 +5,6 @@ import { routineParser } from "./middleware/routine.parser";
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const port = process.env.port || 8080;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -49,8 +48,4 @@ app.get("/print", (req: any, res: any) => {
   res.send(routine.printToday());
 });
 
-const apps = app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});   
-
-module.exports = apps;
+module.exports = app;
