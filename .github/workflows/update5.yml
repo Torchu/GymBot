@@ -1,8 +1,6 @@
 name: "Updates 5.JSON"
 
-on:
-  schedule:
-    - cron: "1 0 * * *"
+on: [push]
 
 jobs:
   updatetoday:
