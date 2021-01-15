@@ -1,5 +1,4 @@
 import Routine from './models/routine';
-import Exercise from "./models/exercise";
 import { routineParser } from "./middleware/routine.parser";
 
 import express from 'express';
