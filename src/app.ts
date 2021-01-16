@@ -1,8 +1,8 @@
-import Routine from './models/routine';
+import Routine from "./models/routine";
 import { routineParser } from "./middleware/routine.parser";
 
-import express from 'express';
-import bodyParser from 'body-parser';
+import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
 
@@ -37,7 +37,6 @@ app.put("/routine", (req: any, res: any) => {
  * pendiente
  */
 
-
 //CRUD: DELETE method
 //Crea una rutina vacía y la guarda sobreescribiendo la actual
 app.delete("/routine", (req: any, res: any) => {
@@ -52,4 +51,4 @@ app.get("/print", (req: any, res: any) => {
   res.send(routine.printToday());
 });
 
-module.exports = app;
+export default app;

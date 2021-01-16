@@ -1,5 +1,5 @@
-const request = require("supertest");
-const app = require("../app");
+import app from "../app";
+import request from "supertest";
 
 describe("Routes tests", () => {
   it("should greet you", async () => {
@@ -9,7 +9,15 @@ describe("Routes tests", () => {
   });
 
   it("should give you the routine", async () => {
-    await request(app).get("/routine").expect(200).expect({"monday":[],"tuesday":[],"wednesday":[],"thursday":[],"friday":[],"saturday":[],"sunday":[]});
+    await request(app).get("/routine").expect(200).expect({
+      monday: [],
+      tuesday: [],
+      wednesday: [],
+      thursday: [],
+      friday: [],
+      saturday: [],
+      sunday: [],
+    });
   });
 
   it("should modify the routine", async () => {
