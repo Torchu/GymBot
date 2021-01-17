@@ -2,7 +2,6 @@ import express from "express";
 import User from "../models/user";
 import { getUser } from "../middleware/getUser";
 import { routineParser } from "../middleware/routine.parser";
-import Routine from "../models/routine";
 
 const router = express.Router();
 
@@ -68,7 +67,9 @@ router.get("/:id/routine", getUser, (req: any, res: any) => {
  */
 router.patch("/:id/routine", getUser, async (req: any, res: any) => {
   if (req.body != null) {
-    res.user.routine = req.body;
+    const data = JSON.stringify(req.body);
+    const routine = routineParser(data);
+    res.user.routine = routine;
   }
   try {
     const updatedUser = await res.user.save();
