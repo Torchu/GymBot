@@ -22,6 +22,10 @@ Como servicio PaaS se ha escogido Heroku. Heroku es un servicio que ofrece recur
 
 Para crear nuestra app en Heroku, nos iremos a la web de Heroku y desde nuestro perfil crearemos una nueva aplicación. Le ponemos un nombre chulo y seleccionamos Europa como servidor. Después, conectamos Heroku con nuestra cuenta de GitHub y ahí seleccionamos nuestro repositorio. Para el despliegue automático, simplemente elegimos la rama master como la rama de despliegue y activamos la opción `Wait for CI to pass before deploy` que hará que no se despliegue nada mientras los test no funcionen y clicamos en el botón que dice `Enable automatic deploys`. Además, por ser la primera vez, desplegamos la rama master a mano.
 
+En nuestro proyecto hemos usado MongoDB como nuestra base de datos, por lo que ahora habrá que conectarla a nuestra aplicación de Heroku. Para ello, entramos en [MongoDB](https://www.mongodb.com) y le damos a probar gratis. Seguimos los pasos de creación de cuenta y cuando tengamos todo listo, le damos a crear un clúster con el plan gratuito (a no ser que queramos gastar dinero en tener mejores prestaciones, pero no es este caso). Una vez creado el clúster, que tardará unos minutillos, configuramos el acceso al mismo, mediante un usuario y una contraseña. Y después seleccionamos la opción de acceso mediante una aplicación, lo cual nos devolverá una url de conexión a nuestra base de datos de mongo, en la que solo falta escribir la contraseña del usuario que hemos creado antes y el nombre de la base de datos que puede ser cualquiera.
+
+Solo tendríamos que usar la ruta final en la función `mongoose.connect(<RUTA>)`, pero para no ponerla en mitad del código, usaremos variables de entorno. Desde el dashboard de tu aplicación de Heroku puedes añadir variables de entorno desde los ajustes de tu app. Añadimos ahí la variable `DATABASE_ULR` con la ruta anterior como valor y luego accederíamos a ella en nuestra aplicación desde la variable `process.env.DATABASE_URL`.
+
 ## Avance de código
 
 - Se ha modificado la estructura de las rutas que ahora se encuentra [aquí](src/routes).

@@ -1,7 +1,6 @@
 import app from "./app";
 import mongoose from "mongoose";
 const port = process.env.PORT || 8080;
-//mongodb+srv://Heroku:herokuapp1234@cluster0.mu2oo.mongodb.net/gymbot?retryWrites=true&w=majority
 
 mongoose.connect(process.env.DATABASE_URL!, {
   useNewUrlParser: true,
