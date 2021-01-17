@@ -1,1 +1,1 @@
-web: grunt start
+web: npm run start
