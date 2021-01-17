@@ -12,6 +12,10 @@
 - **Comprobar el nivel de cobertura de los test:**
   > `npm run coverage`
 
+## PaaS
+
+Como servicio PaaS se ha escogido Heroku. Heroku es un servicio que ofrece recursos suficientes de forma gratuita para desplegar nuestra aplicacion, es muy fácil de entender y su CLI es super sencillo. Además, cuenta un montón de plugins útiles que integrar a nuestra aplicación, como un servicio de logs.
+
 ## Documentación adicional
 
 - [Configuración de git](docs/git-config.md)
