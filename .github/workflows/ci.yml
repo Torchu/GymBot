@@ -16,9 +16,9 @@ jobs:
         uses: supercharge/mongodb-github-action@1.3.0
         with:
           mongodb-version: "4.4"
+          mongodb-replica-set: test-rs
       - run: npm ci
       - run: npm test
         env:
-          DB_NAME: gymbot
-          DB_HOST: localhost
+          DATABASE_URL: mongodb://localhost/test-rs
           CI: true
