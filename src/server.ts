@@ -1,6 +1,6 @@
 import app from "./app";
 import mongoose from "mongoose";
-const port = process.env.port || 8080;
+const port = process.env.PORT || 8080;
 
 /*
 mongoose.connect("mongodb://localhost/gymbot", {
