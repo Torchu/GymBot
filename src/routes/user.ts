@@ -85,29 +85,10 @@ router.patch("/:id/routine", getUser, async (req: any, res: any) => {
 router.patch("/:id/routine/:day", getUser, async (req: any, res: any) => {
   if (req.body != null) {
     const day = parseInt(req.params.day);
-    switch (day) {
-      case 1:
-        res.user.routine.monday = req.body;
-        break;
-      case 2:
-        res.user.routine.tuesday = req.body;
-        break;
-      case 3:
-        res.user.routine.wednesday = req.body;
-        break;
-      case 4:
-        res.user.routine.thursday = req.body;
-        break;
-      case 5:
-        res.user.routine.friday = req.body;
-        break;
-      case 6:
-        res.user.routine.saturday = req.body;
-        break;
-      case 7:
-        res.user.routine.sunday = req.body;
-        break;
-    }
+    const data = JSON.stringify(res.user.routine);
+    const routine = routineParser(data);
+    routine.setDay(day, req.body);
+    res.user.routine = routine;
   }
   try {
     const updatedUser = await res.user.save();
