@@ -9,7 +9,7 @@ make: grunt
 PaaS: https://torchu-gymbot.herokuapp.com
 recurso:
   nombre: users/6004a8914b638a0015d230a8/routine
-  method: POST
+  metodo: POST
   payload:
     monday:
       - name: Press Banca

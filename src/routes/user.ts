@@ -58,6 +58,7 @@ router.delete("/:id", getUser, async (req: any, res: any) => {
  * Devuelve la rutina del usuario especificado
  */
 router.get("/:id/routine", getUser, (req: any, res: any) => {
+  res.setHeader('Location', `/users/${encodeURIComponent(req.params.id)}/routine`);
   res.json(res.user.routine);
 });
 
@@ -73,8 +74,10 @@ router.post("/:id/routine", getUser, async (req: any, res: any) => {
   }
   try {
     const updatedUser = await res.user.save();
-    res.json(updatedUser);
+    res.setHeader('Location', `/users/${encodeURIComponent(req.params.id)}/routine`);
+    res.status(201).json(updatedUser);
   } catch (err) {
+    res.setHeader('Location', `/users/${encodeURIComponent(req.params.id)}/routine`);
     res.status(400).json({ message: err.message });
   }
 });
