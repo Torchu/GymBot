@@ -21,27 +21,25 @@ describe("Routes tests", () => {
   });
 
   it("should modify the routine", async () => {
-    await request(app)
-      .put("/routine")
-      .send({
-        monday: [
-          { name: "Press Banca", _weight: 40 },
-          { name: "Peso Muerto", _weight: 70 },
-        ],
-        tuesday: [],
-        wednesday: [
-          { name: "Press Banca", _weight: 40 },
-          { name: "Peso Muerto", _weight: 70 },
-        ],
-        thursday: [],
-        friday: [
-          { name: "Press Banca", _weight: 40 },
-          { name: "Peso Muerto", _weight: 70 },
-        ],
-        saturday: [],
-        sunday: [],
-      })
-      .expect(200);
+    const routine = {
+      monday: [
+        { name: "Press Banca", _weight: 40 },
+        { name: "Peso Muerto", _weight: 70 },
+      ],
+      tuesday: [],
+      wednesday: [
+        { name: "Press Banca", _weight: 40 },
+        { name: "Peso Muerto", _weight: 70 },
+      ],
+      thursday: [],
+      friday: [
+        { name: "Press Banca", _weight: 40 },
+        { name: "Peso Muerto", _weight: 70 },
+      ],
+      saturday: [],
+      sunday: [],
+    };
+    await request(app).post("/routine").send(routine).expect(200);
   });
 
   it("should clean the routine", async () => {

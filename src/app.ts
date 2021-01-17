@@ -22,10 +22,10 @@ app.get("/routine", (req: any, res: any) => {
   res.send(routine);
 });
 
-//CRUD: PUT method
+//CRUD: POST method
 //Lee los datos de la petición y los transforma a un objeto de la clase Routine, validándolos.
 //Si son válidos los guarda en el fichero JSON, si no, devuelve un error
-app.put("/routine", (req: any, res: any) => {
+app.post("/routine", (req: any, res: any) => {
   const data = JSON.stringify(req.body);
   routine = routineParser(data);
   res.send(req.body);
