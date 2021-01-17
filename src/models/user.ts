@@ -1,5 +1,14 @@
 import Routine from "./routine";
 
 class User {
-  constructor(public name: String, public routine: Routine) {}
+  name: string;
+  routine: Routine;
+
+  constructor(
+    name: string,
+    routine: Routine = new Routine([], [], [], [], [], [], [])
+  ) {
+    this.name = name;
+    this.routine = routine;
+  }
 }
