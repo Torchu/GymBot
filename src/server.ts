@@ -1,10 +1,8 @@
 import app from "./app";
 import mongoose from "mongoose";
 const port = process.env.port || 8080;
-import * as dotenv from "dotenv";
-dotenv.config();
 
-mongoose.connect(process.env.DATABASE_URL!, {
+mongoose.connect("mongodb://localhost/gymbot", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
