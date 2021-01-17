@@ -32,8 +32,8 @@
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "build": "tsc",
-    "test": "jest",
-    "coverage": "jest --coverage --coverageDirectory='docs/coverage' --no-cache && xdg-open docs/coverage/lcov-report/index.html",
+    "test": "jest src",
+    "coverage": "jest src --coverage --coverageDirectory='docs/coverage' --no-cache && xdg-open docs/coverage/lcov-report/index.html",
     "today": "node dist/assets/example_routine.js > functions/today.json"
   },
   "repository": {

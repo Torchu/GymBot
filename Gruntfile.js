@@ -4,19 +4,20 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     run: {
-      install: {
-        //No se necesita puesto que docker ya lo preinstala
-        //cmd: 'npm',
-        //args: [
-        //  'install'
-        //]
-      },
+      install: {},
 
-      build: {},
+      build: {
+        cmd: "tsc",
+      },
 
       test: {
         cmd: "npm",
         args: ["run", "test"],
+      },
+
+      start: {
+        cmd: "node",
+        args: ["dist/server.js"],
       },
     },
   });
@@ -27,4 +28,5 @@ module.exports = function (grunt) {
   grunt.registerTask("build", ["run:build"]);
   grunt.registerTask("install", ["run:install"]);
   grunt.registerTask("test", ["run:test"]);
+  grunt.registerTask("start", ["run:build", "run:start"]);
 };
