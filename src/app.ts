@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use("/users", router);
 
-mongoose.connect("mongodb://localhost/gymbot", {
+mongoose.connect(process.env.DATABASE_URL!, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
