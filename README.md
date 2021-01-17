@@ -20,7 +20,7 @@ Corrigiendo la entrega del hito anterior, se ha añadido morgan como middleware 
 
 Como servicio PaaS se ha escogido Heroku. Heroku es un servicio que ofrece recursos suficientes de forma gratuita para desplegar nuestra aplicacion, es muy fácil de e ntender y su CLI es super sencillo. Además, cuenta un montón de plugins útiles que integrar a nuestra aplicación, como un servicio de logs.
 
-Para crear nuestra app en Heroku, nos iremos a la web de Heroku y desde nuestro perfil crearemos una nueva aplicación. Le ponemos un nombre chulo y seleccionamos Europa como servidor. Después, conectamos Heroku con nuestra cuenta de GitHub y ahí seleccionamos nuestro repositorio. Para el despliegue automático, simplemente elegimos la rama master como la rama de despliegue y activamos la opción `Wait for CI to pass before deploy` que hará que no se despliegue nada mientras los test no funcionen.
+Para crear nuestra app en Heroku, nos iremos a la web de Heroku y desde nuestro perfil crearemos una nueva aplicación. Le ponemos un nombre chulo y seleccionamos Europa como servidor. Después, conectamos Heroku con nuestra cuenta de GitHub y ahí seleccionamos nuestro repositorio. Para el despliegue automático, simplemente elegimos la rama master como la rama de despliegue y activamos la opción `Wait for CI to pass before deploy` que hará que no se despliegue nada mientras los test no funcionen y clicamos en el botón que dice `Enable automatic deploys`. Además, por ser la primera vez, desplegamos la rama master a mano.
 
 ## Avance de código
 
