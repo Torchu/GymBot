@@ -65,7 +65,7 @@ router.get("/:id/routine", getUser, (req: any, res: any) => {
  * CRUD: UPDATE method
  * Actualiza la rutina del usuario especificado
  */
-router.patch("/:id/routine", getUser, async (req: any, res: any) => {
+router.post("/:id/routine", getUser, async (req: any, res: any) => {
   if (req.body != null) {
     const data = JSON.stringify(req.body);
     const routine = routineParser(data);

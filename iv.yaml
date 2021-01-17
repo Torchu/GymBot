@@ -6,3 +6,19 @@ entidad:
   - src/models/routine.ts
 URL: https://gymbot.netlify.app/print
 make: grunt
+PaaS: https://torchu-gymbot.herokuapp.com
+recurso:
+  nombre: users/6004a8914b638a0015d230a8/routine
+  method: POST
+  payload:
+    monday:
+      - name: Press Banca
+        _weight: 40
+      - name: Peso Muerto
+        _weight: 70
+    tuesday: []
+    wednesday: []
+    thusday: []
+    friday: []
+    saturday: []
+    sunday: []

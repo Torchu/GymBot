@@ -26,6 +26,8 @@ En nuestro proyecto hemos usado MongoDB como nuestra base de datos, por lo que a
 
 Solo tendríamos que usar la ruta final en la función `mongoose.connect(<RUTA>)`, pero para no ponerla en mitad del código, usaremos variables de entorno. Desde el dashboard de tu aplicación de Heroku puedes añadir variables de entorno desde los ajustes de tu app. Añadimos ahí la variable `DATABASE_ULR` con la ruta anterior como valor y luego accederíamos a ella en nuestra aplicación desde la variable `process.env.DATABASE_URL`.
 
+El logging de Heroku se puede hacer añadiendo alguno de los addons disponibles y consultando sus planes gratuitos o usando el propio sistema de logs de Heroku, que mantiene durante una semana las últimas 1500 líneas de tus logs. Para nuestra aplicación, con esto tenemos de sobra.
+
 ## Avance de código
 
 - Se ha modificado la estructura de las rutas que ahora se encuentra [aquí](src/routes).
