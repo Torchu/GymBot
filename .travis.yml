@@ -2,6 +2,8 @@ language: minimal
 
 services:
   - docker
+  - mongodb
+
 before_install:
   - docker pull torchu/gymbot
 
