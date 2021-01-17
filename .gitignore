@@ -351,3 +351,7 @@ MigrationBackup/
 
 # Dist folder
 dist
+
+.env
+
+route.rest

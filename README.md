@@ -12,9 +12,21 @@
 - **Comprobar el nivel de cobertura de los test:**
   > `npm run coverage`
 
+## Logger
+
+Corrigiendo la entrega del hito anterior, se ha añadido morgan como middleware de logs.
+
 ## PaaS
 
-Como servicio PaaS se ha escogido Heroku. Heroku es un servicio que ofrece recursos suficientes de forma gratuita para desplegar nuestra aplicacion, es muy fácil de entender y su CLI es super sencillo. Además, cuenta un montón de plugins útiles que integrar a nuestra aplicación, como un servicio de logs.
+Como servicio PaaS se ha escogido Heroku. Heroku es un servicio que ofrece recursos suficientes de forma gratuita para desplegar nuestra aplicacion, es muy fácil de e ntender y su CLI es super sencillo. Además, cuenta un montón de plugins útiles que integrar a nuestra aplicación, como un servicio de logs.
+
+## Avance de código
+
+- Se ha modificado la estructura de las rutas que ahora se encuentra [aquí](src/routes).
+- Se ha creado un sistema de usuarios en el que cada usuario tiene su propia rutina.
+- Se han añadido rutas para crear, listar y borrar los usuarios de la base de datos.
+- Se ha creado una base de datos de mongodb para almacenar los distintos usuarios.
+- Se ha añadido una nueva ruta para modificar solo los ejercicios de un día de la rutina.
 
 ## Documentación adicional
 
