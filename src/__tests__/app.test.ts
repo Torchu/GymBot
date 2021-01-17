@@ -1,5 +1,10 @@
 import app from "../app";
 import request from "supertest";
+import mongoose from "mongoose";
+mongoose.connect("mongodb://localhost/gymbot-test", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 describe("Routes tests", () => {
   let id: string;

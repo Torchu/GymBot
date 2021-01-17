@@ -15,5 +15,4 @@ jobs:
       - run: npm ci
       - run: npm test
         env:
-          DATABASE_URL: mongodb://localhost/test-rs
           CI: true
