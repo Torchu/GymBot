@@ -2,22 +2,29 @@ import app from "../app";
 import request from "supertest";
 
 describe("Routes tests", () => {
+  let id: string;
   it("should greet you", async () => {
     const response = await request(app).get("/");
     expect(response.status).toBe(200);
     expect(response.body.message).toEqual("Welcome to GymBot");
   });
 
+  it("should list the users", async () => {
+    const response = await request(app).get("/users");
+    expect(response.status).toBe(200);
+  });
+
+  it("should create the users", async () => {
+    const req = {
+      name: "Test",
+    };
+    const response = await request(app).post("/users").send(req);
+    id = response.body._id;
+    expect(response.status).toBe(201);
+  });
+
   it("should give you the routine", async () => {
-    await request(app).get("/routine").expect(200).expect({
-      monday: [],
-      tuesday: [],
-      wednesday: [],
-      thursday: [],
-      friday: [],
-      saturday: [],
-      sunday: [],
-    });
+    await request(app).get(`/users/${id}/routine`).expect(200);
   });
 
   it("should modify the routine", async () => {
@@ -39,17 +46,23 @@ describe("Routes tests", () => {
       saturday: [],
       sunday: [],
     };
-    await request(app).post("/routine").send(routine).expect(200);
+    await request(app).patch(`/users/${id}/routine`).send(routine).expect(200);
   });
 
-  it("should clean the routine", async () => {
-    await request(app)
-      .delete("/routine")
-      .expect(200)
-      .expect('"La rutina ha sido borrada"');
+  it("should modify one day work", async () => {
+    const work = [
+      { name: "Press Banca", _weight: 40 },
+      { name: "Peso Muerto", _weight: 70 },
+    ];
+    await request(app).patch(`/users/${id}/routine/2`).send(work).expect(200);
   });
 
   it("should give today's work", async () => {
-    await request(app).get("/print").expect(200);
+    await request(app).get(`/users/${id}/today`).expect(200);
+  });
+
+  it("should delete the user", async () => {
+    const response = await request(app).delete(`/users/${id}`);
+    expect(response.status).toBe(200);
   });
 });
