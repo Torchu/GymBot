@@ -24,6 +24,7 @@ Como servicio PaaS se ha escogido Heroku. Heroku es un servicio que ofrece recur
 
 - Se ha modificado la estructura de las rutas que ahora se encuentra [aquí](src/routes).
 - Se ha creado un sistema de usuarios en el que cada usuario tiene su propia rutina.
+- No es necesario especificar la rutina al crear un usuario, por defecto se crea un arutina vacía.
 - Se han añadido rutas para crear, listar y borrar los usuarios de la base de datos.
 - Se ha creado una base de datos de mongodb para almacenar los distintos usuarios.
 - Se ha añadido una nueva ruta para modificar solo los ejercicios de un día de la rutina.
