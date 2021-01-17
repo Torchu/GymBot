@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
-app.use("/users", router);
+/*app.use("/users", router);*/
 
 //INDEX
 app.get("/", (req: any, res: any) => {
