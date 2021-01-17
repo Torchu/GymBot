@@ -14,7 +14,7 @@
 
 ## Logger
 
-Corrigiendo la entrega del hito anterior, se ha añadido morgan como middleware de logs.
+Corrigiendo la entrega anterior, se ha añadido morgan como middleware de logs.
 
 ## PaaS
 

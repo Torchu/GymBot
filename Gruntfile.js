@@ -7,12 +7,15 @@ module.exports = function (grunt) {
       install: {},
 
       build: {
-        cmd: "tsc",
       },
 
       test: {
         cmd: "npm",
         args: ["run", "test"],
+      },
+
+      transpile: {
+        cmd: "tsc"
       },
 
       start: {
@@ -28,5 +31,5 @@ module.exports = function (grunt) {
   grunt.registerTask("build", ["run:build"]);
   grunt.registerTask("install", ["run:install"]);
   grunt.registerTask("test", ["run:test"]);
-  grunt.registerTask("start", ["run:build", "run:start"]);
+  grunt.registerTask("start", ["run:transpile", "run:start"]);
 };
