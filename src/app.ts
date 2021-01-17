@@ -15,4 +15,9 @@ app.get("/", (req: any, res: any) => {
   res.send({ message: "Welcome to GymBot" });
 });
 
+//STATUS
+app.get("/status", (req: any, res: any) => {
+  res.send({ status: "OK" });
+});
+
 export default app;
