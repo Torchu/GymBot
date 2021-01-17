@@ -49,3 +49,10 @@ En este documento se irán describiendo los distintos pasos en la realización d
 
 - Crear rutas para los microservicios.
 - Configurar comandos del gestor de tareas.
+
+## [PaaS](https://github.com/Torchu/GymBot/milestone/7)
+
+- Despliegue de la aplicación en [Heroku]('url cuando la haya').
+- Configurar despliegue automático.
+- Configurar sistema de logs.
+- Configurar base de datos de usuarios.
